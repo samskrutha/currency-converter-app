@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: your-docker-hub-username/my-backend-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
