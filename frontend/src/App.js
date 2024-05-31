@@ -13,7 +13,7 @@ function App() {
             const response = await axios.get(`http://localhost:8080/convert?from=${fromCurrency}&to=${toCurrency}&amount=${amount}`);
             setConvertedAmount(response.data);
         } catch (error) {
-            console.error("There was an error fetching the conversion rate!!", error);
+            console.error("There was an error fetching the conversion rate!!!", error);
         }
     };
 
