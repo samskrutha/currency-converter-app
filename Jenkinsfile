@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/samskrutha/currency-converter-app.git'
+                git branch: 'main', url: 'https://github.com/samskrutha/currency-converter-app.git', credentialsId: 'github'
             }
         }
 
